@@ -1,0 +1,27 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffaf0;
+}
+
+#quotesList {
+  width: min(90%, 55rem);
+  margin: 2em auto;
+  font-family: cursive;
+  padding-left: 2em;
+}
+
+.quote-text {
+  font-size: 3rem;
+  margin: 1em 0 0.5em 0;
+}
+
+.quote-author {
+  font-size: 1.5rem;
+}
