@@ -1,0 +1,96 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0ebfe9;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 1em;
+}
+
+.list-container {
+  width: min(95%, 25rem);
+  margin: 0 auto;
+}
+
+.form {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 0.75em;
+  font-size: 1.15rem;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.plus-icon {
+  position: absolute;
+  color: #fff;
+  font-size: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.5em;
+  transition: transform 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.plus-icon:hover {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+#itemList {
+  margin-top: 1em;
+  list-style-type: none;
+}
+
+#itemList li {
+  background-color: #fefefe;
+  padding: 1em;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  color: #00688b;
+  font-weight: 700;
+  cursor: move;
+  margin-bottom: 0.5em;
+  position: relative;
+  overflow: hidden;
+  transition: transform 150ms ease-in;
+}
+
+#itemList li::after {
+  content: "Drag Me";
+  position: absolute;
+  right: -5em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00688b;
+  font-size: 0.85rem;
+  transition: right 250ms ease-in-out;
+}
+
+#itemList li:hover::after {
+  right: 1em;
+}
+
+#itemList li.over {
+  transform: scale(1.05);
+}
